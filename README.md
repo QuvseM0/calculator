@@ -24,7 +24,9 @@ the logic has been set up AND the UI is ready.
     This part is pure html+css so its relatively easy.
     copy a simple analog calculator layout and replicate it in html+css
     the display should contain a placeholder value for now or just blank
-    make sure to take extra time on this step to make the calculator exxxxtra pretty
+    
+    --deprecated--
+    make sure to take extra time on this step to make the calculator exxxxtra pretty --deprecated--
 
 ## Integration
 
