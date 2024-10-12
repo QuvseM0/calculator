@@ -24,15 +24,16 @@ the logic has been set up AND the UI is ready.
     This part is pure html+css so its relatively easy.
     copy a simple analog calculator layout and replicate it in html+css
     the display should contain a placeholder value for now or just blank
-    
+
     --deprecated--
     make sure to take extra time on this step to make the calculator exxxxtra pretty --deprecated--
 
 ## Integration
 
     Make Them Fit!
-    Make the buttons on the calculator display a number
-    Make it so that it can take a number, an operator and another number
-    When the user presses the "=" button it should do the operate() function with the numbers typed on the calculator
+    create the functions that display the numbers pressed:
+        -The screen should display the first number as its being pressed, building it from right to left. When an operator is pressed it should display only the operator. when another number is pressed it should start building the next number.
+    Make a function caled operate() that can take number1, an operator and number2 and calculate it
+    When the user presses the "=" button it should do the operate() function with the numbers typed on the calculator and display it
 
 -- quvse --

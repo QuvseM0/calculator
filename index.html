@@ -4,22 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="javascript.js"></script>
     <title>Calculator</title>
 </head>
 <body>
     <h1>Calculator</h1>
     <div class="calculator">
-        <div class="display">
-            <div class="displayNumber">0</div>
-            <div class="displayNumber">0</div>
-            <div class="displayNumber">0</div>
-            <div class="displayNumber">0</div>
-            <div class="displayNumber">0</div>
-            <div class="displayNumber">0</div>
-            <div class="displayNumber">0</div>
-            <div class="displayNumber">0</div>
-            <div class="displayNumber">0</div>
+        <div id="displayContainer" class="display">
+            <div id="displayContent"></div>           
         </div>
         <div class="buttons">
             <div class="operatorContainer">
@@ -30,18 +21,18 @@
             </div>
             <div class="pad">
                 <div class="numbers">
-                    <button id="1" class="button">1</button>
-                    <button id="2" class="button">2</button>
-                    <button id="3" class="button">3</button>
-                    <button id="4" class="button">4</button>
-                    <button id="5" class="button">5</button>
-                    <button id="6" class="button">6</button>
-                    <button id="7" class="button">7</button>
-                    <button id="8" class="button">8</button>
-                    <button id="9" class="button">9</button>
-                    <button id="0" class="button">0</button>
-                    <button id="float" class="button">.</button>
-                    <button id="delete" class="button">C</button>
+                    <button id="1" class="number button">1</button>
+                    <button id="2" class="number button">2</button>
+                    <button id="3" class="number button">3</button>
+                    <button id="4" class="number button">4</button>
+                    <button id="5" class="number button">5</button>
+                    <button id="6" class="number button">6</button>
+                    <button id="7" class="number button">7</button>
+                    <button id="8" class="number button">8</button>
+                    <button id="9" class="number button">9</button>
+                    <button id="0" class="number button">0</button>
+                    <button id="float" class="float button">.</button>
+                    <button id="delete" class="delete button">C</button>
                 </div>
                 <div class="equalContainer">
                     <button id="equal">=</button>
@@ -50,4 +41,5 @@
         </div>
     </div>
 </body>
+<script src="javascript.js"></script>
 </html>
