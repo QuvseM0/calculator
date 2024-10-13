@@ -28,14 +28,18 @@ function operate(nrA,op,nrB){
 
 const display = document.querySelector("#displayContent")
 const erease = document.querySelector(".delete")
+const equal = document.querySelector("#equal")
 const numberButton = document.querySelectorAll(".number")
 const operatorButton = document.querySelectorAll(".operator");
+const placeh = "0" 
 
-let placeh = "0" 
 let ops = ["+","-","*","/"]
-let text
-let displayText
-
+let opSelected = ""
+let text = ""
+let displayText = ""
+let displayValue = 0
+let numA = 0
+let numB = 0
 
 display.textContent = placeh
 
@@ -49,19 +53,35 @@ numberButton.forEach(element => {
         }else{
             displayText
         }
+        if(opSelected == ""){
+            numA = Number(displayText + text)
+        }else{
+            numB = Number(displayText + text)
+        }
     })
 })
 
-console.log(displayText)
+equal.addEventListener("click", e => {
+    console.log(displayValue)
+    console.log(opSelected)
+    displayValue = operate(numA,opSelected,numB)
+    display.textContent = displayValue
+    numA = Number(displayValue)
+    numB = 0
+    opSelected = ""
+})
 
 erease.addEventListener("click", e => {
     display.textContent = placeh
+    displayText = ""
+    numA, numB, displayValue = 0
 })
 
 operatorButton.forEach(element => {
     element.addEventListener("click", e => {
         text = element.textContent
         display.textContent = text
+        opSelected = text
     })
 })
 
