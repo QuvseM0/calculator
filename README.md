@@ -36,4 +36,16 @@ the logic has been set up AND the UI is ready.
     Make a function caled operate() that can take number1, an operator and number2 and calculate it
     When the user presses the "=" button it should do the operate() function with the numbers typed on the calculator and display it
 
+
+
+### Almost there!!
+    Finishing the logic does not mean finished project. I still have things to work on to make this a decent calculator (it feels very flimsy right now)
+
+    -Working with floats. Float button still doesnt work. If an operation results in a float it is rounded to 0 decimals right now, but I wanted it so that it outputs float if its a float and a regular integer otherwise.
+
+    -Error message for when the user divides by 0. Right now it displays "Infinity". I want it to display "Don't do that"
+
+    -Adding a backspace button so that if i click on a number by accident i can correct it.
+
+    -Keyboard support
 -- quvse --

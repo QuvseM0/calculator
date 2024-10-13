@@ -61,10 +61,18 @@ numberButton.forEach(element => {
     })
 })
 
+operatorButton.forEach(element => {
+    element.addEventListener("click", e => {
+        text = element.textContent
+        display.textContent = text
+        opSelected = text
+    })
+})
+
 equal.addEventListener("click", e => {
     console.log(displayValue)
     console.log(opSelected)
-    displayValue = operate(numA,opSelected,numB)
+    displayValue = Math.round(operate(numA,opSelected,numB)).toFixed(0)
     display.textContent = displayValue
     numA = Number(displayValue)
     numB = 0
@@ -77,12 +85,5 @@ erease.addEventListener("click", e => {
     numA, numB, displayValue = 0
 })
 
-operatorButton.forEach(element => {
-    element.addEventListener("click", e => {
-        text = element.textContent
-        display.textContent = text
-        opSelected = text
-    })
-})
 
 
