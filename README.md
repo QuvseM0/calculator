@@ -43,6 +43,8 @@ the logic has been set up AND the UI is ready.
 
     -Working with floats. Float button still doesnt work. If an operation results in a float it is rounded to 0 decimals right now, but I wanted it so that it outputs float if its a float and a regular integer otherwise.
 
+    //done
+
     -Error message for when the user divides by 0. Right now it displays "Infinity". I want it to display "Don't do that"
 
     -Adding a backspace button so that if i click on a number by accident i can correct it.

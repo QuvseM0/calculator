@@ -28,10 +28,10 @@ function operate(nrA,op,nrB){
 
 const display = document.querySelector("#displayContent")
 const erease = document.querySelector(".delete")
+const floatButton = document.querySelector(".float")
 const equal = document.querySelector("#equal")
 const numberButton = document.querySelectorAll(".number")
 const operatorButton = document.querySelectorAll(".operator");
-const placeh = "0" 
 
 let ops = ["+","-","*","/"]
 let opSelected = ""
@@ -41,11 +41,11 @@ let displayValue = 0
 let numA = 0
 let numB = 0
 
-display.textContent = placeh
+display.textContent = "0"
 
 numberButton.forEach(element => {
     element.addEventListener("click", e => {
-        if(display.textContent === placeh || ops.includes(display.textContent)){display.textContent = ""}
+        if(display.textContent === "0" || ops.includes(display.textContent)){display.textContent = ""}
         text = element.textContent
         displayText = display.textContent
         if (display.textContent.length <= 9){
@@ -69,10 +69,26 @@ operatorButton.forEach(element => {
     })
 })
 
-equal.addEventListener("click", e => {
-    console.log(displayValue)
-    console.log(opSelected)
-    displayValue = Math.round(operate(numA,opSelected,numB)).toFixed(0)
+floatButton.addEventListener("click", e => {
+    text = floatButton.textContent
+    while(!display.textContent.includes(".")){
+        if(display.textContent === opSelected){
+            display.textContent = "0"
+            display.textContent += text
+        }else{
+            display.textContent += text
+        }
+    }
+})
+
+equal.addEventListener("click", e => { 
+    let result = operate(numA,opSelected,numB)
+    
+    if(!Number.isInteger(result)){
+        displayValue = Math.round(result * 100) / 100
+    }else{
+        displayValue = result
+    }
     display.textContent = displayValue
     numA = Number(displayValue)
     numB = 0
@@ -80,7 +96,7 @@ equal.addEventListener("click", e => {
 })
 
 erease.addEventListener("click", e => {
-    display.textContent = placeh
+    display.textContent = "0"
     displayText = ""
     numA, numB, displayValue = 0
 })
