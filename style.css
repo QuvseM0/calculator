@@ -9,7 +9,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #dfd5c4;
+    background-color: #c4d7df;
 }
 
 h1{
@@ -84,6 +84,11 @@ button{
 }
 #equal{
     background-color: #f8756b;
-    height: 432px;
+    height: 216px;
+    width: 125px;
+}
+#bckspace{
+    background-color: #eeb871;
+    height: 216px;
     width: 125px;
 }

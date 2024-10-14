@@ -1,12 +1,11 @@
+let numberA
+let numberB
+let operator
 
 function add(a,b){return a + b};
 function subtract(a,b){return a - b};
 function multiply(a,b){return a * b};
 function divide(a,b){return a / b};
-
-let numberA
-let numberB
-let operator
 
 function operate(nrA,op,nrB){
     switch (op) {
@@ -25,11 +24,11 @@ function operate(nrA,op,nrB){
     };
 };
 
-
 const display = document.querySelector("#displayContent")
 const erease = document.querySelector(".delete")
-const floatButton = document.querySelector(".float")
 const equal = document.querySelector("#equal")
+const bckspace = document.querySelector("#bckspace")
+const floatButton = document.querySelector(".float")
 const numberButton = document.querySelectorAll(".number")
 const operatorButton = document.querySelectorAll(".operator");
 
@@ -89,7 +88,15 @@ equal.addEventListener("click", e => {
     }else{
         displayValue = result
     }
-    display.textContent = displayValue
+    if(displayValue === Infinity){
+        display.textContent = "LIGMA!"
+    }else if (isNaN(displayValue)){
+        display.textContent = "0"
+        displayText = ""
+        numA, numB, displayValue = 0    
+    }else{
+        display.textContent = displayValue
+    }
     numA = Number(displayValue)
     numB = 0
     opSelected = ""
@@ -101,5 +108,8 @@ erease.addEventListener("click", e => {
     numA, numB, displayValue = 0
 })
 
+bckspace.addEventListener("click", e => {
+    display.textContent = display.textContent.slice(0, -1)
+})
 
 

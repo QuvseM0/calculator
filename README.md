@@ -47,7 +47,13 @@ the logic has been set up AND the UI is ready.
 
     -Error message for when the user divides by 0. Right now it displays "Infinity". I want it to display "Don't do that"
 
+    //done
+
     -Adding a backspace button so that if i click on a number by accident i can correct it.
 
+    //done
+
     -Keyboard support
+
+    
 -- quvse --
